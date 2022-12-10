@@ -1,0 +1,6 @@
+/Users/malolasimman.s.k/Documents/MCUXpressoIDE_11.6.1_8255/workspace/Digital_angle_gauge/CMSIS/core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
+/Users/malolasimman.s.k/Documents/MCUXpressoIDE_11.6.1_8255/workspace/Digital_angle_gauge/CMSIS/core_cm0plus.h:791:22:NVIC_ClearPendingIRQ	16	static
+/Users/malolasimman.s.k/Documents/MCUXpressoIDE_11.6.1_8255/workspace/Digital_angle_gauge/CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
+../source/TSI_Init.c:25:6:Touch_Init	8	static
+../source/TSI_Init.c:56:6:TSI0_IRQHandler	8	static
+../source/TSI_Init.c:67:5:touch_val	8	static

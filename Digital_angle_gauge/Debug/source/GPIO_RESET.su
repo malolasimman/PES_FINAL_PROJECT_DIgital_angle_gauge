@@ -1,0 +1,3 @@
+/Users/malolasimman.s.k/Documents/MCUXpressoIDE_11.6.1_8255/workspace/Digital_angle_gauge/CMSIS/core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
+../source/GPIO_RESET.c:18:6:Initialize_Interrupts	8	static
+../source/GPIO_RESET.c:42:6:PORTD_IRQHandler	8	static

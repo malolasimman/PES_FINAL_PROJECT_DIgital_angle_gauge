@@ -1,0 +1,7 @@
+../source/Command_1Processor.c:43:6:author_handler	8	static
+../source/Command_1Processor.c:49:6:calibrate_handler	8	static
+../source/Command_1Processor.c:59:6:help_handler	8	static
+../source/Command_1Processor.c:73:6:angle_handler	8	static
+../source/Command_1Processor.c:86:6:yes_handler	8	static
+../source/Command_1Processor.c:89:6:no_handler	8	static
+../source/Command_1Processor.c:120:6:process_command	88	static

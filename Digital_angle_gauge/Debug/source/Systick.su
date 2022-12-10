@@ -1,0 +1,6 @@
+/Users/malolasimman.s.k/Documents/MCUXpressoIDE_11.6.1_8255/workspace/Digital_angle_gauge/CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
+../source/Systick.c:30:7:SysTick_Init	16	static
+../source/Systick.c:42:6:SysTick_Handler	8	static
+../source/Systick.c:50:6:reset_timer	8	static
+../source/Systick.c:56:12:now	8	static
+../source/Systick.c:62:12:get_timer	8	static

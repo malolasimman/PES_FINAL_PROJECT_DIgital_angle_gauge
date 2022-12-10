@@ -1,0 +1,5 @@
+../source/MMA8451.c:27:5:init_mma	8	static
+../source/MMA8451.c:34:6:read_full_xyz	32	static
+../source/MMA8451.c:61:6:read_xyz	8	static
+../source/MMA8451.c:73:6:convert_xyz_to_roll_pitch	40	static
+../source/MMA8451.c:99:6:Delay	24	static

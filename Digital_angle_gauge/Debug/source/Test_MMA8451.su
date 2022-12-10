@@ -1,0 +1,2 @@
+../source/Test_MMA8451.c:6:6:test_color_assign	16	static
+../source/Test_MMA8451.c:32:6:test_angle_detect_color	8	static
