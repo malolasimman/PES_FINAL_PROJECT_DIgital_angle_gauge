@@ -7,20 +7,26 @@ File	   : MMA8451.c
 Created on : 07-Dec-2022
 University : University of Colorado at Boulder
 Assignment : PES_FINAL_PROJECT
+Reference  : https://github.com/alexander-g-dean/ESF/tree/master/NXP/Code/Chapter_8
 */
+/* -------------------------------------------------- /
+                    INCLUDES
+/ -------------------------------------------------- */
 #include <MKL25Z4.H>
 #include "MMA8451.h"
 #include "i2c.h"
 #include <math.h>
-
+/* -------------------------------------------------- /
+                    GLOBAL VARIABLES
+/ -------------------------------------------------- */
 int16_t acc_X=0, acc_Y=0, acc_Z=0;
 float roll=0.0, pitch=0.0,ref_roll=0.0,ref_pitch=0.0;
 extern int roll_angle,pitch_angle;
-
-//mma data ready
 extern uint32_t DATA_READY;
 
-
+/* -------------------------------------------------- /
+            	FUNCTION DEFINITION
+/ -------------------------------------------------- */
 
 //initializes mma8451 sensor
 //i2c has to already be enabled
@@ -30,7 +36,7 @@ int init_mma()
 	i2c_write_byte(MMA_ADDR, REG_CTRL1, 0x01);
 	return 1;
 }
-
+//READS XYZ
 void read_full_xyz()
 {
 	int i;
@@ -57,7 +63,7 @@ void read_full_xyz()
 	acc_Z = temp[2]/4;
 }
 
-
+// reads xyz acceleration
 void read_xyz(void)
 {
 	// sign extend byte to 16 bits - need to cast to signed since function
@@ -69,7 +75,7 @@ void read_xyz(void)
 	acc_Z = (int8_t) i2c_read_byte(MMA_ADDR, REG_ZHI);
 
 }
-
+// converts acceleration to angle
 void convert_xyz_to_roll_pitch(void) {
 	float ax = acc_X/COUNTS_PER_G,
 				ay = acc_Y/COUNTS_PER_G,
@@ -87,15 +93,8 @@ void convert_xyz_to_roll_pitch(void) {
 		if(ref_pitch = 1){
 			ref_roll=pitch;
 		}
-
-
-
-
-
-
-
-
 }
+//Delay function
 void Delay (uint32_t dly) {
   volatile uint32_t t;
 

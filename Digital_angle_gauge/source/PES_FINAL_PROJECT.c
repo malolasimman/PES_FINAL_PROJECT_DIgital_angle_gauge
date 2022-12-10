@@ -8,6 +8,10 @@ Created on : 7-Dec-2022
 University : University of Colorado at Boulder
 Assignment : PES_FINAL_PROJECT
 */
+
+/* -------------------------------------------------- /
+                    	INCLUDES
+/ -------------------------------------------------- */
 #include "Command_Processor.h"
 #include "PES_FINAL_PROJECT.h"
 #include "PWM.h"
@@ -21,14 +25,20 @@ Assignment : PES_FINAL_PROJECT
 #include "GPIO_RESET.h"
 #include"TEST_cbfifo.h"
 #include "Test_MMA8451.h"
+
+/* -------------------------------------------------- /
+                    GLOBAL VARIABLES
+/ -------------------------------------------------- */
 extern __IO uint8_t Switch_pressed;
 int ref_x = 0;
 int ref_y = 0;
 extern int flag;
 extern Digital_Angle_guage new_state;
-/*
- * @brief   Application entry point.
- */
+
+/* -------------------------------------------------- /
+                FUNCTION DEFINITIONS
+/ -------------------------------------------------- */
+// Initializing GPIO
 void Gpio_Init()
 {
 	// Enable clock to Port B and Port D
@@ -46,6 +56,7 @@ void Gpio_Init()
 		PTD->PDDR |= MASK(BLUE_LED_POS);
 
 }
+//gets user commands for command processor
 void my_getstring()
 {
 	char c;
@@ -63,7 +74,7 @@ void my_getstring()
 			}
 
 		}
-		else						// if character is not backspace or carriage return load value to array
+		else				// if character is not backspace or carriage return load value to array
 		{
 			printf("%c",c);
 			str[index]= c;
@@ -74,7 +85,9 @@ void my_getstring()
    process_command(str);		// calling process command
    index=0;
 }
-
+/* -------------------------------------------------- /
+                  MAIN FUNCTIONS
+/ -------------------------------------------------- */
 int main(void) {
 
     /* Init board hardware. */
@@ -85,7 +98,7 @@ int main(void) {
     /* Init FSL debug console. */
     BOARD_InitDebugConsole();
 #endif
-
+    // INTIALIZATIONS
     sysclock_init();
     SysTick_Init();
     Gpio_Init();
@@ -101,17 +114,20 @@ int main(void) {
 				;
 		}
 	printf("\r\nAll functions are initialized");
+
+	//TEST MODULES FOR CBFIFO AND ACCELEROMETER
 	printf("\r\nStarted Testing");
 	test_angle_detect_color();
 	test_cbfifo();
+	RGB_LED_Control(0,0,SET_COLOR);
 	printf("\r\nTesting Completed");
 
+	// STARTING DIGITAL ANGLE GAUAGE
 	printf("\r\nRed LED indicate 30˚");
 	printf("\r\nGreen LED indicate 45˚");
 	printf("\r\nBlue LED indicate 60˚");
 	printf("\r\nWhite LED indicate 90˚");
-
-	printf("\r\nWaiting for Board to align then LED will change to green and then turn off");
+	printf("\r\nWaiting for Board to align then LED will then turn off");
 	printf("\r\nFor button press connect PTD7 pin 19 and ground to reset reference level");
 
 	new_state = INIT_STATE;
@@ -120,20 +136,20 @@ int main(void) {
 	printf("\r\nEnter no for button press to calibrate");
 	printf("\n\r?");
 	my_getstring();
-	digital_angle_FSM();
+	digital_angle_FSM();//start fsm
 
+	//ENTERING INFINITE LOOP
 	while (1)
 	{
-
-
-
-		if(flag==1){
+		if(flag==1) //COMMAND PROCESSOR MODE
+		{
 			printf("\n\r?");
 			my_getstring();
 		}
-		if(flag==0){
-			TSI0->DATA |= TSI_DATA_SWTS_MASK;
-			digital_angle_FSM();
+		if(flag==0) // EXTERNAL PUSH BUTTON MODE
+		{
+			TSI0->DATA |= TSI_DATA_SWTS_MASK; //enabling touch
+			digital_angle_FSM();              //start fsm
 		}
 
 	}

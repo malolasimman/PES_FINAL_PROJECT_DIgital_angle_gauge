@@ -3,9 +3,9 @@ Author       	: MALOLASIMMAN SRINIVASAN KANNAN
 E-Mail     	    : masr4788@colorado.edu
 Subject   	    : Principles of Embedded Software
 File	  	    : Systick.c
-Created on 		: 21-Nov-2022
+Created on 		: 8-DEC-2022
 University 		: University of Colorado at Boulder
-Assignment 		: 07
+Assignment 		: PES_FINAL_PROJECT
 Code Reference 1: https://github.com/alexander-g-dean/ESF/blob/master/NXP/Code/Chapter_2/Source/main.c
 Code Reference 2:https://github.com/alexander-g-dean/ESF/tree/master/NXP/Misc/Touch%20Sense.
 Compiler        : GCC -Wall -Werror

@@ -1,4 +1,3 @@
-
 /*
 Author     : MALOLASIMMAN SRINIVASAN KANNAN
 E-Mail     : masr4788@colorado.edu
@@ -10,11 +9,13 @@ Assignment : PES_FINAL_PROJECT
 */
 #ifndef GPIO_RESET_H_
 #define GPIO_RESET_H_
-
+/* -------------------------------------------------- /
+                    MACROS
+/ -------------------------------------------------- */
 #define SW1_POS (7) //on Port D7 pin19
 #define MASK(x) (1UL << (x))
-
+/* -------------------------------------------------- /
+               Function Declaration
+/ -------------------------------------------------- */
 void Initialize_Interrupts(void);
-
-
 #endif /* GPIO_RESET_H_ */

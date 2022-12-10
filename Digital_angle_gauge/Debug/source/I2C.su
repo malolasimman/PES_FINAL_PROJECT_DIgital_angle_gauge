@@ -1,8 +1,8 @@
-../source/I2C.c:11:6:i2c_init	8	static
-../source/I2C.c:34:6:i2c_busy	8	static
-../source/I2C.c:78:6:i2c_wait	16	static
-../source/I2C.c:89:6:i2c_start	8	static
-../source/I2C.c:96:6:i2c_read_setup	16	static
-../source/I2C.c:114:9:i2c_repeated_read	24	static
-../source/I2C.c:142:9:i2c_read_byte	32	static
-../source/I2C.c:173:6:i2c_write_byte	24	static
+../source/I2C.c:24:6:i2c_init	8	static
+../source/I2C.c:47:6:i2c_busy	8	static
+../source/I2C.c:92:6:i2c_wait	16	static
+../source/I2C.c:103:6:i2c_start	8	static
+../source/I2C.c:110:6:i2c_read_setup	16	static
+../source/I2C.c:127:9:i2c_repeated_read	24	static
+../source/I2C.c:156:9:i2c_read_byte	32	static
+../source/I2C.c:187:6:i2c_write_byte	24	static

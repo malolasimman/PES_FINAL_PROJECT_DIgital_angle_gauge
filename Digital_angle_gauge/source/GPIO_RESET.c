@@ -38,18 +38,15 @@ void Initialize_Interrupts(void)
 		NVIC_EnableIRQ(PORTD_IRQn);
 }
 
-
+// IRQ handler function
 void PORTD_IRQHandler(void)
 {
 	Switch_pressed = 0;
 
 	if ((PORTD->ISFR & (1 << SW1_POS)))
 	{
-		/* clearing on purpose to create a debounce condition */
 		Switch_pressed = 0;
 
-		/* reading again to confirm that the
-		 * switch was not pressed accidentally */
 		if(	(GPIOD->PDIR & (1 << SW1_POS)) == 0)
 		{
 			/* Set the switch flag as the

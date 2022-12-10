@@ -1,4 +1,3 @@
-
 /*
 Author     : MALOLASIMMAN SRINIVASAN KANNAN
 E-Mail     : masr4788@colorado.edu
@@ -20,15 +19,15 @@ Assignment : PES_FINAL_PROJECT
 #include "Command_Processor.h"
 #include "State_Machine.h"
 #include "PWM.h"
-extern int reference_angle1,reference_angle2;
-extern int roll_angle,pitch_angle;
+
 /* -------------------------------------------------- /
                     GLOBAL VARIABLE
 / -------------------------------------------------- */
 extern Digital_Angle_guage new_state ;
 extern int roll_degree,pitch_degree;
 int i=0,flag;
-
+extern int reference_angle1,reference_angle2;
+extern int roll_angle,pitch_angle;
 /* -------------------------------------------------- /
                  FUNCTION DEFINITION
 / -------------------------------------------------- */
@@ -37,15 +36,12 @@ void author_handler()
 {
 	printf("\r\nMalolaSimman Srinivasan Kannan");
 }
-
 /** prints hexdump from start location to length which user as given **/
 void calibrate_handler()
 {
-
 	printf("\n\r");
 	new_state=CALIBRATE_STATE;
 	digital_angle_FSM();
-
 }
 
 /** prints help message **/
@@ -56,31 +52,37 @@ void help_handler()
 	printf("\r\n|_____________________________________|__________________________________________________________|");
 	printf("\r\n|____ options _____|___ Functions ____|_______________________ Syntax ___________________________|");
 	printf("\r\n|______ 1 _________|_____ Author _____|_______________________ (author) _________________________|");
-    printf("\r\n|______ 2 _________|___ calibrate ____|_____________________ (calibrate) ________________________|");
+	printf("\r\n|______ 1 _________|_____ angle ______|________________________ (angle) __________________________|");
+	printf("\r\n|______ 2 _________|___ calibrate ____|______________________ (calibrate) _______________________|");
 	printf("\r\n|______ 3 _________|_____  Help  _____|_______________________ (help) ___________________________|");
-	printf("\r\n|______ 4 _________|___ command mode____|_______________________ (help) ___________________________|");
-	printf("\r\n|______ 5 _________|_____  button  _____|_______________________ (help) ___________________________|");
+	printf("\r\n|______ 4 _________|___ command mode__|_______________________ (yes) ____________________________|");
+	printf("\r\n|______ 5 _________|___  button mode _|_______________________ (no) _____________________________|");
 	printf("\r\n|_____________________________ Enter the operation ______________________________________________|");
 	printf("\r\n|_____________________________________|__________________________________________________________|");
 }
+// In this function calculates angles
 void angle_handler(){
-	digital_angle_FSM();
+	digital_angle_FSM(); //starts FSM
 	printf("\n\r");
-	convert_xyz_to_roll_pitch();
-	roll_degree= (roll_angle-reference_angle1);
-		pitch_degree= (pitch_angle-reference_angle2);
+	convert_xyz_to_roll_pitch(); // get current position
+	roll_degree= (roll_angle-reference_angle1); // calculates roll degree
+	pitch_degree= (pitch_angle-reference_angle2); // calculates pitch degree
 	if(roll_degree<0){
-			roll_degree=roll_degree*(-1);
-		}
-			if(pitch_degree<0){
-				pitch_degree=pitch_degree*(-1);
-			}
+		roll_degree=roll_degree*(-1);
+	}
+	if(pitch_degree<0){
+		pitch_degree=pitch_degree*(-1);
+	}
 	printf("%d degree detected\r\n",roll_degree);
 }
-void yes_handler(){
+// This function is for command mode
+void yes_handler()
+{
 	flag=1;
 }
-void no_handler(){
+// This function is for external button press mode
+void no_handler()
+{
 	flag =0;
 }
 /** Prints a string with build information that is dynamically

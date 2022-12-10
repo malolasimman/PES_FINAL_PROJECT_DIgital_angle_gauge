@@ -1,7 +1,7 @@
 /*
  * 	Author: MalolaSimman Srinivasan Kannan
  *  File name: TSI_Init.c
- *  Created on: 11-OCT-2022
+ *  Created on: 8-DEC-2022
  *  Use: Touch initialization and its interrupt handler
  *  Reference code Author: Alexander G. Dean
  *  Code Reference 1: https://github.com/alexander-g-dean/ESF/blob/master/NXP/Code/Chapter_2/Source/main.c

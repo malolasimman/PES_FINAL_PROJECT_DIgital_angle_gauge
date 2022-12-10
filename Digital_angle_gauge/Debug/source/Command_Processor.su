@@ -1,7 +1,7 @@
-../source/Command_Processor.c:36:6:author_handler	8	static
-../source/Command_Processor.c:42:6:calibrate_handler	8	static
-../source/Command_Processor.c:52:6:help_handler	8	static
-../source/Command_Processor.c:66:6:angle_handler	8	static
-../source/Command_Processor.c:80:6:yes_handler	8	static
-../source/Command_Processor.c:83:6:no_handler	8	static
-../source/Command_Processor.c:114:6:process_command	88	static
+../source/Command_Processor.c:35:6:author_handler	8	static
+../source/Command_Processor.c:40:6:calibrate_handler	8	static
+../source/Command_Processor.c:48:6:help_handler	8	static
+../source/Command_Processor.c:64:6:angle_handler	8	static
+../source/Command_Processor.c:79:6:yes_handler	8	static
+../source/Command_Processor.c:84:6:no_handler	8	static
+../source/Command_Processor.c:116:6:process_command	88	static

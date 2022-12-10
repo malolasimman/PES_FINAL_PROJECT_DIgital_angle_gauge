@@ -8,7 +8,9 @@ Created on : 7-Dec-2022
 University : University of Colorado at Boulder
 Assignment : 06
 */
-
+/* -------------------------------------------------- /
+                    	INCLUDES
+/ -------------------------------------------------- */
 #ifndef PES_FINAL_PROJECT_H_
 #define PES_FINAL_PROJECT_H_
 #include <MKL25Z4.h>
@@ -20,11 +22,19 @@ Assignment : 06
 #include "peripherals.h"
 #include "pin_mux.h"
 #include "clock_config.h"
-//#include "fsl_debug_console.h"
+
+/* -------------------------------------------------- /
+                      MACROS
+/ -------------------------------------------------- */
 #define RED_LED_POS 18
 #define BLUE_LED_POS 1
 #define GREEN_LED_POS 19
 #define MASK(x) (1UL << (x))
 #define MAINTAIN_REF_LEVEL							(0)
+
+/* -------------------------------------------------- /
+                FUNCTION DECLARATION
+/ -------------------------------------------------- */
 void my_getstring();
+
 #endif /* PES_FINAL_PROJECT_H_ */

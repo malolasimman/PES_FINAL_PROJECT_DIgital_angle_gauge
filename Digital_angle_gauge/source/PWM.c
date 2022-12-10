@@ -55,6 +55,7 @@ void PWM_Init()
 	TPM2->SC |= TPM_SC_CMOD(1);
 	TPM0->SC |= TPM_SC_CMOD(1);
 }
+// setting pwm color
 void RGB_LED_Control(unsigned int red, unsigned int green, unsigned int blue){
 
 	TPM2->CONTROLS[0].CnV=red;

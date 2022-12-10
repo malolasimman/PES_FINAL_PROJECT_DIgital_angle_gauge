@@ -1,14 +1,16 @@
 /*
- * Test_cbfifo.c
- *
- *  Created on: 09-Dec-2022
- *      Author: malolasimman.s.k
- */
+Author     : MALOLASIMMAN SRINIVASAN KANNAN
+E-Mail     : masr4788@colorado.edu
+Subject    : Principles of Embedded Software
+File	   : Test_cbfifo.h
+Created on : 9-Dec-2022
+University : University of Colorado at Boulder
+Assignment : PES_FINAL_PROJECT
+*/
 
-
-/***************************
-Header files
-***************************/
+/* -------------------------------------------------- /
+                    INCLUDES
+/ -------------------------------------------------- */
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
@@ -16,16 +18,16 @@ Header files
 #include "uart.h"
 #include "fsl_debug_console.h"
 #include"TEST_cbfifo.h"
-/***************************
-GLobal variables
-***************************/
+/* -------------------------------------------------- /
+                    GLOBAL VARIABLES
+/ -------------------------------------------------- */
 int g_tests_passed = 0;
 int g_tests_total = 0;
 
 CbFifo cb_test = {.front = 0, .rear = 0,};
-/***************************
-Function macro
-***************************/
+/* -------------------------------------------------- /
+                FUNCTION DEFINTION
+/ -------------------------------------------------- */
 void test_assert(int value)
 {
   g_tests_total++;
@@ -101,5 +103,5 @@ void test_cbfifo()
 
   test_cbfifo_one_iteration();
 
-  printf("passed test cases\n");
+  printf("passed test cases");
 }

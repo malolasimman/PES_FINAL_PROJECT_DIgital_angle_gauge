@@ -5,7 +5,7 @@ Subject    : Principles of Embedded Software
 File	   : UART.h
 Created on : 07-Nov-2022
 University : University of Colorado at Boulder
-Assignment : 06
+Assignment : PES_FINAL_PROJECT
 Reference  : https://github.com/alexander-g-dean/ESF/tree/master/NXP/Code/Chapter_8/Serial-Demo
 */
 #ifndef UART_H_

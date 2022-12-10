@@ -3,9 +3,9 @@ Author     : MALOLASIMMAN SRINIVASAN KANNAN
 E-Mail     : masr4788@colorado.edu
 Subject    : Principles of Embedded Software
 File	   : UART.c
-Created on : 08-Nov-2022
+Created on : 08-DEC-2022
 University : University of Colorado at Boulder
-Assignment : 06
+Assignment : PES_FINAL_PROJECT
 Reference  : https://github.com/alexander-g-dean/ESF/tree/master/NXP/Code/Chapter_8/Serial-Demo
 */
 
@@ -42,33 +42,6 @@ FILE __stdin;	//use with fget/sscanf, or scanf
 /* -------------------------------------------------- /
                	 FUNCTION DEFINITIONS
 / -------------------------------------------------- */
-//int __sys_write(int handle, char *buf,int size)
-//{
-//	while (*buf != '\0')
-//	{ // copy characters up to null terminator
-//		while (cbfifo_Full(&Tx))
-//			; // wait for space to open up
-//		cbfifo_Enqueue(&Tx, buf,1); //@changing *buf = buf
-//		buf++;
-//	}
-//	// start transmitter if it isn't already running
-//	if (!(UART0->C2 & UART0_C2_TIE_MASK))
-//	{
-//		UART0->D = cbfifo_Dequeue(&Tx,1);
-//		UART0->C2 |= UART0_C2_TIE(1);
-//	}
-//	return 0;
-//}
-//
-//int __sys_readc(void)
-//{
-//	while((cbfifo_Empty(&Rx))==1);
-//	return cbfifo_Dequeue(&Rx,1);
-//}
-
-
-
-
 
 int __sys_readc(void)
 {

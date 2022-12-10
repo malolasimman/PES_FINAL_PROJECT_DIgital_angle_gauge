@@ -1,7 +1,6 @@
-../source/State_Machine.c:33:6:actual_angle	8	static
-../source/State_Machine.c:39:21:calibrate2zero	8	static
-../source/State_Machine.c:70:21:calibrate2state	16	static
-../source/State_Machine.c:91:6:change_reference_angle	16	static
-../source/State_Machine.c:104:6:digital_angle_FSM	8	static
-../source/State_Machine.c:128:21:Angle_guage	8	static
-../source/State_Machine.c:171:6:assign_color	16	static
+../source/State_Machine.c:54:21:calibrate2zero	8	static
+../source/State_Machine.c:87:21:calibrate2state	16	static
+../source/State_Machine.c:109:6:change_reference_angle	16	static
+../source/State_Machine.c:123:6:digital_angle_FSM	8	static
+../source/State_Machine.c:149:21:Angle_guage	8	static
+../source/State_Machine.c:192:6:assign_color	16	static

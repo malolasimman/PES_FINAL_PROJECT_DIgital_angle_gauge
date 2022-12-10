@@ -1,34 +1,46 @@
+/*
+Author     : MALOLASIMMAN SRINIVASAN KANNAN
+E-Mail     : masr4788@colorado.edu
+Subject    : Principles of Embedded Software
+File	   : Test_MMA8451.c
+Created on : 9-Dec-2022
+University : University of Colorado at Boulder
+Assignment : PES_FINAL_PROJECT
+*/
+/* -------------------------------------------------- /
+                    INCLUDES
+/ -------------------------------------------------- */
 #include "Test_MMA8451.h"
 #include "fsl_debug_console.h"
 #include "State_Machine.h"
 #include "PWM.h"
 #include "Systick.h"
+
+/* -------------------------------------------------- /
+              FUNCTION DEFINITIONS
+/ -------------------------------------------------- */
+// assigning color wrt to angle
 void test_color_assign(int roll_color,int pitch_color)
 {
 	if(roll_color==30||pitch_color==30)
 		{
-
 			RGB_LED_Control(255,0,0);
-
 		}
 	else if(roll_color==45||pitch_color==45)
 		{
-
 			RGB_LED_Control(0,255,0);
-
 		}
 	else if(roll_color==60||pitch_color==60)
 		{
-
 			RGB_LED_Control(0,0,255);
-
 		}
 	else if(roll_color==90||pitch_color==90)
 		{
-
 	        RGB_LED_Control(255,255,255);
 		}
 	}
+
+// testing angles
 void test_angle_detect_color()
 {
 	/* angle 0 test case */

@@ -2,5 +2,5 @@
 /Users/malolasimman.s.k/Documents/MCUXpressoIDE_11.6.1_8255/workspace/Digital_angle_gauge/CMSIS/core_cm0plus.h:791:22:NVIC_ClearPendingIRQ	16	static
 /Users/malolasimman.s.k/Documents/MCUXpressoIDE_11.6.1_8255/workspace/Digital_angle_gauge/CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
 /Applications/MCUXpressoIDE_11.6.1_8255/ide/plugins/com.nxp.mcuxpresso.tools.macosx_11.6.1.202207200623/tools/redlib/include/sys/libconfig-arm.h:241:5:__sys_readc	8	static
-../source/UART.c:78:6:Init_UART0	24	static
-../source/UART.c:137:6:UART0_IRQHandler	16	static
+../source/UART.c:51:6:Init_UART0	24	static
+../source/UART.c:110:6:UART0_IRQHandler	16	static
