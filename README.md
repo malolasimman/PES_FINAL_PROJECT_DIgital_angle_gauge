@@ -19,7 +19,7 @@ add this project and it will be easier to measure. This project demonstrates and
 we have addressed above. Developed logic in such a way as to measure the digital angle and with respect to
 orientation changes LED color. This project allows user provision to calibrate a zero reference through an interrupt
 External switch connected PTD7 and user will give confirmation of reference angle through TSI after button press or with a serial monitor
-where user can give the command.
+where user can give the command through command processor as well.
 # command options:
 
 <img width="599" alt="Screenshot 2022-12-10 at 1 37 49 AM" src="https://user-images.githubusercontent.com/59477885/206841496-58a79147-1f0a-474b-8d73-2493e91a54b4.png">
@@ -40,7 +40,7 @@ parity none
 ![Finite state machine](https://user-images.githubusercontent.com/59477885/206842357-a31d348d-5bf2-4483-a324-c9f70aa94b05.png)
 
 ## Demo Video link:
-
+https://drive.google.com/file/d/1XDHooC2CWMwzR8Q8kRBI69o_KnPW2EIy/view?usp=sharing
 ## Test methodology:
 Tested the Accelerometer and Circular buffer did the automated testcases;
 1. Test_cbfifo() function im enquing and dequeing the characters to circular buffer 
